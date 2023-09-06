@@ -64,7 +64,7 @@ exports.confirmarCuenta = async (req, res, next) => {
   }
   // si existe confirmar y redireccionar
   usuario.activo = 1;
-  await usuario.sava();
+  await usuario.save();
 
   req.flash("exito", "La cuenta se ha confirmado, ya puedes iniciar sesión");
   res.redirect("/iniciar-sesion");

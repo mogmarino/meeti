@@ -1,6 +1,7 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const router = require("./routes");
+const passport = require("./config/passport");
 const path = require("path");
 const flash = require("connect-flash");
 const session = require("express-session");
@@ -42,6 +43,10 @@ app.use(
     saveUninitialized: false,
   })
 );
+
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 // agrega flash messages
 app.use(flash());

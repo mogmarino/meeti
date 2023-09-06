@@ -1,6 +1,7 @@
 const express = require("express");
 const homeController = require("../controllers/homeController");
 const usuarioController = require("../controllers/usuariosController");
+const authController = require("../controllers/authController");
 
 const router = express.Router();
 
@@ -14,5 +15,6 @@ module.exports = function () {
 
   // iniciar sesion
   router.get("/iniciar-sesion", usuarioController.formIniciarSesion);
+  router.post("/iniciar-sesion", authController.autenticarUsuario);
   return router;
 };
