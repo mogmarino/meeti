@@ -13,6 +13,8 @@ db.sync()
   .then(() => console.log("DB conectada"))
   .catch((error) => console.log(error));
 require("./models/Usuarios");
+require("./models/Categorias");
+require("./models/Grupos");
 // variables de desarollo
 require("dotenv").config({ path: ".env" });
 
