@@ -393,10 +393,15 @@ main.contenedor-formularios {
 .default-form .campo textarea {
     height: 10rem;
 }
-.contenedor-editor {
+.contenedor-editor, .contenedor-input {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+.small-ubicacion{
+    margin-top: 8px;
+    font-weight: 700;
 }
 trix-editor  {
     display: block;
@@ -626,4 +631,9 @@ aside .ubicacion {
 }
 aside img {
     display: block;
+}
+
+.mapa {
+    height: 400px;
+    width: 1000px;
 }
